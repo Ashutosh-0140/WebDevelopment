@@ -1,0 +1,14 @@
+h1 {
+    color:brown;
+    background-color: blanchedalmond;
+}
+
+button {
+    color: gold;
+    background-color: aqua;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+}

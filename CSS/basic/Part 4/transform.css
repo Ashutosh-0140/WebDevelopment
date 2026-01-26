@@ -1,0 +1,24 @@
+div{
+    height: 30px;
+    width: 70px;
+    border: 2px black;
+    display: inline-block;
+    background-color: aqua;
+    margin: 100px;
+}
+
+#one{
+    transform: rotate(60deg);
+}
+
+#two{
+    transform: scale(2);
+
+}
+#three {
+    transform: translate(50px,200px); /* Moves 50px right and 20px down */
+}
+
+#four {
+    transform: skew(30deg,20deg); /* make angle */
+}

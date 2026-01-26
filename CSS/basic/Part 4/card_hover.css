@@ -1,0 +1,24 @@
+.photo {
+    width: 200px;
+    height: 300px;
+    border: 2px solid maroon;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0px 4px 10px black;
+    transition: 1s;
+    vertical-align: top;
+}
+
+img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.a {
+    padding: 0px 2px 0px 2px;
+}
+
+.photo:hover {
+    box-shadow: 0 18px 20px pink;
+}

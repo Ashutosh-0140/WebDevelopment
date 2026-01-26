@@ -1,0 +1,23 @@
+.container {
+   
+    
+    display: flex;
+}
+
+.class_holer {
+    
+}
+
+.card {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap;               
+  padding: 20px;
+}
+
+#heading {
+    text-align: center;
+}
+#head_para {
+    text-align: center;
+}

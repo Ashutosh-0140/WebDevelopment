@@ -1,0 +1,52 @@
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: width 2s ease-in 0.5s;
+    margin: 20px;
+}
+
+#box1:hover {
+    width: 600px;
+}
+
+#box2{
+    width: 100px;
+    height:100px;
+    background-color: red;
+    transform: rotate(90deg);
+    transform: translate(200px 200px);
+    margin: 20px;
+}
+    
+#box3 {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    transform: skewX(20deg);
+    margin: 20px;
+}
+
+#box4 {
+    width: 100px;
+    height: 100px;
+    background: lightgreen;
+    box-shadow: 2px 2px 5px green;
+    margin: 20px;
+    
+}
+
+#mypic {
+    width: 300px;
+    height: 180px;
+    background: pink;
+    background-image: url("ganesh.jpg");
+    background-size: cover;
+    opacity: 100%;
+    transition: 2s;
+}
+
+#mypic:hover{
+    box-shadow: 20px 20px 20px rgb(219, 80, 103);
+    border: 2px yellowgreen;
+}

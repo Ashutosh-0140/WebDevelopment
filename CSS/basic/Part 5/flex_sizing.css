@@ -1,0 +1,30 @@
+#container {
+    height: 500px;
+    width: 600px;
+    background-color: ghostwhite;
+    margin: 2px ;
+    border: 2px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    
+}
+#anti {
+    align-self: flex-start;
+    /* flex-grow: 1; */
+    flex-shrink: 2;
+    /* max-width: 300px;
+    min-width: 300px; */
+     
+}
+
+#org{
+    /* flex-grow: 1; */
+    flex-shrink: 3;
+}
+#container div {
+    height: 50px;
+    width: 100px;
+}

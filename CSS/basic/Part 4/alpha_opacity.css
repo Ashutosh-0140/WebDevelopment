@@ -1,0 +1,13 @@
+#b1 {
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    opacity: 0.2;
+    
+}
+
+#b2 {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(255, 111, 0,.5);
+}

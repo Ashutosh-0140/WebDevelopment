@@ -1,0 +1,61 @@
+1.boilerplate- Standard format of writing html code
+
+2. ! - Direct sign used for generating boilerplate code for HTML code
+
+3. List in HTML (Unordered-use bullet points and ordered-use numbers)
+
+4. Attribute in html - Used to add more information to the tag
+        <html lang="en">  #lang is attribute
+        <meta charset="UTF-8">  #charset is attribute
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  #name, content, initial-scale are attributes
+
+5.Anchor Tag - Used for add link to the web page (Absolute link-Google link, Netflix link            Relative link like file link of our desktop)
+
+6.Img tag - Used for image here two link we are giving (src - used for giving relative link of the image which is present in our folder or in the internet in the case of image delete or any fault we have to add another image that is alternative image that will show in the case of technical issue or in the case of wrong link alternative link will appear. It is recommended to add the image in the same folder in which we are working on  )
+
+7.br tag- Used for line breaking 
+
+8.b tag used for bold tag, i for italic and u for underline
+
+9. Comments in html <!-- Ashutosh -->
+
+10.Inline and Block Element(each line taken only one object, Taken that much area how much needed )
+(block eg-Heading tag, Paragraph tag 
+  Inline- Anchor tag, Image tag)
+
+11. div element- It is like a container used to store HTML elements or group elements together
+
+12. Span Tag- Span is also a generic container used to hold other HTML elements or group elements together. It is an Inline element 
+
+13. Hr tag- Used for horizontal line brake a line which is appear horizontally
+
+14. sub and sup- subscript and superscript. 
+
+15. Semantic Markup- (Semantic tag- by seeing this tag we can easily know that which type of content present in it like <h1> by seeing this we can know that a heading is present in it. eg- <h1>,<p>,<img>)
+(non_semantic tag by seeing this we cant know that which type of content is present in it. eg-<div>, <span>)
+
+16.header tag- used for create the head of the web page
+
+17.footer tag- used to create footer of the web page
+
+18. nav tag- navigation tag is used in a web page to contain some link in the same web page which take us to that specific portion
+
+19. main tag- it contains the main part of the page 
+
+20. article tag, section tag, aside tag - section tag contains related contents, aside tag is used for indirect link, eg- promotion of a movie in another movie
+
+21. html entities are starts with & and end with ; 
+
+22. html tables- tables is used in html to store data. rowspan, colspan is there. thead, tbody, tfoot semantics are there
+
+23.forms in html - used to take data as input from user and store in the database
+
+ 
+
+21. lt- used for less then
+
+22. &nbsp; for extra space 
+
+
+
+

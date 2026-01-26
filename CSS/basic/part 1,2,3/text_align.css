@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h3 {
+    text-align: right;
+    color: bisque;
+}
+
+p {
+    text-align: start;
+    background-color: aqua;
+    color: color-mix(in srgb, color percentage, color percentage);
+}

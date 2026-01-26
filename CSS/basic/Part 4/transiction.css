@@ -1,0 +1,19 @@
+button{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    font-size: 5 px;
+    color: black;
+    background-color: aqua;
+    border: 2px orange;
+    transition: 1s;
+    
+}
+
+button:hover {
+    color: brown;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+
+
