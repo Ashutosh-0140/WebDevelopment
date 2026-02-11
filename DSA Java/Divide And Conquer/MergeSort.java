@@ -1,50 +1,45 @@
-public class MergeSort{
-    public static void sort(int arr[], int S, int E){
-        if(S>= E){
+class MergeSort{
+    public static void PrintArr(int arr[]){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+    public static void ArrSort(int arr[], int Si, int Ei){
+        int mid = Si +(Ei - Si)/2;
+        if(Si>=Ei){
             return;
         }
-        int mid = S+(E-S)/2;
-
-        sort(arr, S, mid);
-        sort(arr, mid+1, E);
-
-        merge(arr, S, E, mid);
+        ArrSort(arr, Si, mid);
+        ArrSort(arr,mid+1, Ei);
+        merge(arr, Si, mid, Ei);
     }
-    public static void merge(int arr[], int S, int E, int mid){
-        int temp[] = new int[E-S+1];
-        int i = S;
-        int j = mid+1;
+    public static void merge(int arr[], int Si, int mid, int Ei){
+        int temp[] = new int[(Ei - Si)+1];
+        int i = Si;
+        int j = mid + 1;
         int k = 0;
-
-        while(i<=mid && j<=E){
-            if(arr[i] < arr[j]){
-                temp[k] = arr[i];
-                i++;
+        while(i<= mid && j<=Ei){
+            if(arr[i]<arr[j]){
+                temp[k++] = arr[i++];
             }
             else{
-                temp[k] = arr[j];
-                j++;
+                temp[k++] = arr[j++];
             }
-            k++;
         }
-
-        while(i<=mid){
-            temp[k++] = arr[i++];
-        }
-
-        while(j<=E){
+        while(j <= Ei){
             temp[k++] = arr[j++];
         }
-
-        for (int a = 0; a < temp.length; a++) {
-            arr[S + a] = temp[a];
+        while(i <= mid){
+            temp[k++] = arr[i++];
+        }
+        for(k =0, i = Si; k<temp.length; k++, i++){
+            arr[i] = temp[k];
         }
     }
     public static void main(String s[]){
-        int arr[] = {6, 3, 9, 5, 2, 8};
-        sort(arr, 0, arr.length-1);
-        for(int num:arr){
-            System.out.print(num+" ");
-        }
-    }
+        int arr[] = {3, 2, 5, 6, 9, 7};
+        int Si = 0;
+        int Ei = arr.length-1;
+        ArrSort(arr, Si, Ei);
+        PrintArr(arr);    }
 }
