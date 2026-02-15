@@ -5,7 +5,7 @@ public class tic_tac_toe{
 
     public static void printBoard(){
         System.out.println("|---|---|---|");
-        System.out.println("|"+board[0]+"|"+board[1]+"|"+board[2]+"|");
+        System.out.println("|  "+board[0]+" |  "+board[1]+"  |  "+board[2]+"  |");
         System.out.println("|---|---|---|");
         System.out.println("|"+board[3]+"|"+board[4]+"|"+board[5]+"|");
         System.out.println("|---|---|---|");
