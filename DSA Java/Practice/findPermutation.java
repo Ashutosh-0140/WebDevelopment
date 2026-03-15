@@ -1,24 +1,20 @@
-public class findPermutation {
-    public static void findPermutations(String str, String ans, boolean[] used) {
-        
-        if (ans.length() == str.length()) {
+public class findPermutation{
+    public static void permutations(String str, String ans){
+        if(str.length() == 0){
             System.out.println(ans);
             return;
         }
 
-        // Try each character
-        for (int i = 0; i < str.length(); i++) {
-            if (!used[i]) { 
-                used[i] = true; 
-                findPermutations(str, ans + str.charAt(i), used); 
-                used[i] = false; 
-            }
+        for(int i =0; i < str.length(); i++){
+            char cur = str.charAt(i);
+
+            String newStr = str.substring(0, i) + str.substring(i+1);
+
+            permutations(newStr, ans+cur);
         }
     }
-
-    public static void main(String[] args) {
+    public static void main(String s[]){
         String str = "abc";
-        boolean[] used = new boolean[str.length()];
-        findPermutations(str, "", used);
+        permutations(str, "");
     }
 }
