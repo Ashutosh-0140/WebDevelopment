@@ -1,6 +1,6 @@
 public class NQueen{
    static int count=0;
-   public static boolean isSafe(char board[][], int row, int col){
+   public static boolean isSafe(int board[][], int row, int col){
     //left diagonal
     for(int i = row - 1, j = col-1; i>=0 && j>=0; i--,j--){
         if(board[i][j] =='Q'){
@@ -22,13 +22,11 @@ public class NQueen{
     }
     return true;
    }
-    public static void nQueen(char board[][], int row){
+    public static int nQueen(int board[][], int row){
          
         if(row == board.length){
-            System.out.println("---- Queen Board ----");
-            printBoard(board);
             count ++;
-            return;
+            return -1;
         }
 
         for(int j =0; j<board.length; j++){
@@ -38,27 +36,31 @@ public class NQueen{
                 board[row][j] = 'X';
             }
         }
+        return count;
     }
 
-    public static void printBoard(char board[][]){
-
+    public int totalNQueens(int n) {
+        int[][] board = new int[n][n]; // queens[row] = column position
         for(int i = 0; i<board.length; i++){
-            for(int j=0; j<board.length; j++){
-                System.out.print(board[i][j]+" ");
+            for(int j = 0; j<board.length; j++){
+                board[i][j] = 'X';
             }
-            System.out.println();
         }
+        return nQueen(board, 0);
     }
+
+
     public static void main(String s[]){
-        int n = 4;
-        char board[][] = new char[n][n];
+        int n = 10;
+        int board[][] = new int[n][n];
 
         for(int i = 0; i<board.length; i++){
             for(int j = 0; j<board.length; j++){
                 board[i][j] = 'X';
             }
         }
-        nQueen(board, 0);
-        System.out.print("Total number of possibles with "+n+" Queens are:"+count);
+        NQueen nq = new NQueen();
+        int num =nq.totalNQueens(n);
+        System.out.print("Total number of possibles with "+n+" Queens are:"+num);
     }
 }
