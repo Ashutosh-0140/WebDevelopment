@@ -22,10 +22,21 @@ public class NQueen{
     }
     return true;
    }
+
+   public static void printBoard(char board[][]){
+
+        for(int i = 0; i<board.length; i++){
+            for(int j=0; j<board.length; j++){
+                System.out.print(board[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
     public static int nQueen(int board[][], int row){
          
         if(row == board.length){
             count ++;
+            //printBoard(board);
             return -1;
         }
 
@@ -51,7 +62,7 @@ public class NQueen{
 
 
     public static void main(String s[]){
-        int n = 10;
+        int n = 4;
         int board[][] = new int[n][n];
 
         for(int i = 0; i<board.length; i++){
