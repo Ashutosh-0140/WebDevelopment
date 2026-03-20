@@ -15,7 +15,7 @@ class TreasureRoom extends Room {
 
     @Override
     public void enter(Player player) {
-        System.out.println(" You found treasure: " + treasure);
+        System.out.println("\uD83D\uDC8E You found treasure: " + treasure);
         player.addItem(treasure);
     }
 }
@@ -29,7 +29,7 @@ class MonsterRoom extends Room {
 
     @Override
     public void enter(Player player) {
-        System.out.println("A wild " + monster + " appears!");
+        System.out.println("\uD83D\uDC79 A wild " + monster + " appears!");
         System.out.println("Do you want to fight (f) or run (r)?");
         Scanner sc = new Scanner(System.in);
         String choice = sc.nextLine();
@@ -37,16 +37,16 @@ class MonsterRoom extends Room {
         Optional<String> action = Optional.ofNullable(choice);
         action.filter(c -> c.equalsIgnoreCase("f"))
               .ifPresentOrElse(c -> {
-                  System.out.println("You defeated the " + monster);
+                  System.out.println("\u2694\uFE0F You defeated the " + monster);
                   player.addItem("Trophy of " + monster);
-              }, () -> System.out.println("🏃 You ran away safely."));
+              }, () -> System.out.println("\uD83C\uDFC3 You ran away safely."));
     }
 }
 
 class EmptyRoom extends Room {
     @Override
     public void enter(Player player) {
-        System.out.println("The room is empty...");
+        System.out.println("\uD83D\uDEAA The room is empty...");
     }
 }
 
@@ -58,7 +58,7 @@ class Player {
     }
 
     public void showInventory() {
-        System.out.println("\n Inventory:");
+        System.out.println("\n\uD83D\uDCE6 Inventory:");
         inventory.stream()
                  .distinct()
                  .sorted()
@@ -81,7 +81,7 @@ public class DungeonGame {
         executor.submit(() -> {
             try {
                 Thread.sleep(20000); // 20 seconds chase timer
-                System.out.println("\nThe dungeon collapses! Game Over.");
+                System.out.println("\n\u23F0 The dungeon collapses! Game Over.");
                 System.exit(0);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -90,12 +90,12 @@ public class DungeonGame {
 
         Scanner sc = new Scanner(System.in);
         for (Room room : dungeon) {
-            System.out.println("\nEnter next room? (y/n)");
+            System.out.println("\n\u27A1\uFE0F Enter next room? (y/n)");
             String choice = sc.nextLine();
             if (choice.equalsIgnoreCase("y")) {
                 room.enter(player);
             } else {
-                System.out.println("You stopped exploring.");
+                System.out.println("\uD83D\uDEAA You stopped exploring.");
                 break;
             }
         }
