@@ -1,14 +1,14 @@
 class Xpower{
-    static int pow(int x, int n){
-        if(n==1){
-            return x;
+    public static int pow(int a, int b){
+        if(b == 1){
+            return a;
         }
-        return x*pow(x, n-1);
+        return a*pow(a, b-1);
     }
     public static void main(String s[]){
-        int x = 2;
-        int n = 10;
-        int res = pow(x,n);
+        int a = 2;
+        int b = 4;
+        int res = pow(a,b);
         System.out.println(res);
     }
 }
