@@ -1,4 +1,4 @@
-public class ClassCancle {
+public class angryProfessor {
     public static void isCancled(int k, int arr[]){
         int onTimeStudent = 0;
         for(int i = 0; i<arr.length; i++){
