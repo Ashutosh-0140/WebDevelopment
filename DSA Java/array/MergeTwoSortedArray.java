@@ -6,7 +6,7 @@ class MergeTwoSortedArray {
 
         while (i >= 0 && j >= 0) {
             if (nums1[i] >= nums2[j]) {
-                nums1[idx--] = nums1[i--];  // FIXED: copy from nums1
+                nums1[idx--] = nums1[i--];  
             } else {
                 nums1[idx--] = nums2[j--];
             }
@@ -19,7 +19,7 @@ class MergeTwoSortedArray {
 
     public static void main(String[] args) {
         int m = 4, n = 4;
-        int arr1[] = new int[m + n]; // FIXED: allocate extra space
+        int arr1[] = new int[m + n]; 
         arr1[0] = 2; arr1[1] = 4; arr1[2] = 6; arr1[3] = 8;
         int arr2[] = {1, 3, 5, 6};
 
