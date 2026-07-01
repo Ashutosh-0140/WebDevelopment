@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import javax.swing.tree.TreeNode;
+
 class buildBST{
     static class Node{
         int data;
@@ -143,6 +145,47 @@ class buildBST{
         return root;
     }
 
+    //Sorted array to balanced bst
+    public static Node createNode(int arr[], int st, int end){
+        if(st>end){
+            return null;
+        }
+        int mid = (st+end)/2;
+        Node root = new Node(arr[mid]);
+        root.left = createNode(arr, st, mid-1);
+        root.right = createNode(arr, mid+1, end);
+        return root;
+
+    }
+
+    //bst to balanced bst
+    public static void findInorder(Node root, ArrayList<Integer> inorder){
+        if(root == null){
+            return;
+        }
+        findInorder(root.left, inorder);
+        inorder.add(root.data);
+        findInorder(root.right, inorder);
+    }
+    public static Node createBST(ArrayList<Integer> inorder, int st, int end){
+        if(st>end){
+            return null;
+        }
+        int mid = (st+end)/2;
+        Node root = new Node(inorder.get(mid));
+        root.left = createBST(inorder, st,mid-1);
+        root.right = createBST(inorder, mid+1, end);
+        return root;
+    }
+    public static Node balanceBST(Node root) {
+        //find inorder
+        ArrayList<Integer> inorder = new ArrayList<>();
+        findInorder(root,inorder);
+
+        //create bst
+        return createBST(inorder,0,inorder.size()-1);
+    }
+
     public static void preOrder(Node root){
         if(root == null){
             return;
@@ -167,7 +210,13 @@ class buildBST{
         //rootToLeaf(root, new ArrayList<Integer>());
         //System.out.println(isValidBST(root, null, null));
 
-        mirror(root);
-        preOrder(root);
+        //mirror(root);
+        //preOrder(root);
+        int arr[] = {1,2,3,4,5,6,7};
+        int st = 0;
+        int end = arr.length-1;
+        Node bbst =createNode(arr, st, end);
+        inorder(bbst);
+        balanceBST(root);
     }
 }
