@@ -11,6 +11,9 @@ public class InsertInHeap {
                 int temp = arr.get(x);
                 arr.set(x, arr.get(p));
                 arr.set(p,temp);
+
+                x = p;
+                p = (x-1)/2;
             }
         }
         //peek() the data
@@ -20,7 +23,7 @@ public class InsertInHeap {
 
         //delete data
         private void heapify(int i){
-            int left = 2*+1;
+            int left = 2*i +1;
             int right = 2*i+2;
             int minIdx = i;
 
@@ -44,7 +47,7 @@ public class InsertInHeap {
 
             //swap 1st and last
             int temp = arr.get(0);
-            arr.set(0,arr.size()-1);
+            arr.set(0,arr.get(arr.size()-1));
             arr.set(arr.size()-1, temp);
 
             //remove last index value
@@ -56,8 +59,20 @@ public class InsertInHeap {
             return data;
 
         }
+
+        private boolean isEmpty() {
+            return arr.size() ==0;
+        }
     }
     public static void main(String s[]){
+        Heap h = new Heap();
+        h.add(3);
+        h.add(4);
+        h.add(1);
+        h.add(5);
 
+        while(!h.isEmpty()){
+           System.out.println( h.remove());
+        }
     }
 }
