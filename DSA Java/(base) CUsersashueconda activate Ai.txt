@@ -1,0 +1,3 @@
+(base) C:\Users\ashue>conda activate AiML
+
+(AiML) C:\Users\ashue>jupyter notebook

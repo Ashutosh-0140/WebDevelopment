@@ -10,6 +10,7 @@ class AreaOfCircle{
         float area = pi*r*r;
 
         System.out.println("Area of Circle is "+area);
+        sc.close();
         
     }
 }
